@@ -1,11 +1,17 @@
 import './index.css';
-
+import { IconBrandTwitter } from '@tabler/icons-react';
 export default function App() {
     return (
         <div className={'bg-slate-900 grid place-content-center min-h-screen'}>
             <div className='flex gap-x-2'>
                 <Button text='Register' />
-                <Button text='Log In' />
+                <Button
+                    text={
+                        <>
+                            <IconBrandTwitter />
+                        </>
+                    }
+                />
             </div>
         </div>
     );
