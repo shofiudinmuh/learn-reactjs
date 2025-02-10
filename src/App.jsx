@@ -1,39 +1,26 @@
-import clsx from 'clsx';
 import './index.css';
-import { IconBrandFacebook, IconBrandTwitter } from '@tabler/icons-react';
-export default function App() {
+// import { IconBrandFacebook, IconBrandTwitter } from '@tabler/icons-react';
+import Card from './components/Card';
+import Button from './components/Button';
+function App() {
     return (
-        <div className={'bg-slate-900 grid place-content-center min-h-screen'}>
-            <div className='flex gap-x-2'>
-                <Button onClick={() => console.log('Register')} type='submit'>
-                    <IconBrandFacebook />
-                    Register
-                </Button>
-                <Button
-                    className={'bg-pink-600'}
-                    onClick={() => console.log('Login')}
-                    type='submit'
-                >
-                    <IconBrandTwitter />
-                    Login
-                </Button>
+        <div className={'bg-slate-100 antialiased text-slate-800 flex items-center justify-center min-h-screen'}>
+            <div className='max-w-xl w-full'>
+                <Card>
+                    <Card.Title>Hello React</Card.Title>
+                    <Card.Body>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore voluptate labore voluptatum. Nobis porro
+                        minima delectus id exercitationem eligendi explicabo sint ut officiis soluta consectetur, esse cumque
+                        magni maxime dignissimos.
+                    </Card.Body>
+
+                    <Card.Footer>
+                        <Button>Register</Button>
+                    </Card.Footer>
+                </Card>
             </div>
         </div>
     );
 }
 
-function Button(props) {
-    const { className = 'bg-blue-600', children, text } = props;
-    return (
-        <button
-            {...props}
-            className={clsx(
-                className,
-                '[&>svg]:w-5 [&>svg]:h-5 [&>svg]:stroke-1 flex items-center text-white px-4 py-2 rounded',
-            )}
-        >
-            {/* If text is exist, render the text, and if not exist, render the children */}
-            {text || children}
-        </button>
-    );
-}
+export default App;
