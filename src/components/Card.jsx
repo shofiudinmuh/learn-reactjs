@@ -4,14 +4,14 @@ function Card({ title, children, footer }) {
 
 function Title({ children }) {
     return (
-        <div className='p-4 border-b'>
+        <div className='p-4 border-b text-black'>
             <h1 className={'text-xl'}>{children}</h1>
         </div>
     );
 }
 
 function Body({ children }) {
-    return <div className={'leading-relaxed p-4'}>{children}</div>;
+    return <div className={'leading-relaxed p-4 '}>{children}</div>;
 }
 
 function Footer({ children }) {
