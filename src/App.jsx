@@ -1,14 +1,22 @@
 import './index.css';
-// import { IconBrandFacebook, IconBrandTwitter } from '@tabler/icons-react';
-// import Card from './components/Card';
-// import Button from './components/Button';
 import PlaceContentCenter from './components/PlaceContentCenter';
 import { useState } from 'react';
-import Counter from './components/Counter';
+import Button from './components/Button';
+import { IconBrandGithub } from '@tabler/icons-react';
+import Card from './components/Card.jsx';
 function App() {
     return (
         <PlaceContentCenter>
-            <Counter initialValue={10} />
+            <Card>
+                <Card.Title>Sign up for account!</Card.Title>
+                <Card.Body></Card.Body>
+                <Card.Footer>
+                    <Button>
+                        <IconBrandGithub />
+                        Register
+                    </Button>
+                </Card.Footer>
+            </Card>
         </PlaceContentCenter>
     );
 }
